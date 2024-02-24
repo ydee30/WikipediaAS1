@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Article</title>
+  <link rel="stylesheet" href="new.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+          <li><a href="entry.html">Entry</a></li>
+          <li><a href="new.html">New</a></li>
+          <li><a href="edit.html">Edit</a></li>
+          <li><a href="random.html">Random</a></li>
+          <li><a href="htmlconversion.html">ConvertToHTML</a></li>
+        </ul>
+      </nav>
+    <h1>Create New Article</h1>
+  </header>
+  <main>
+    <form action="submit_article.php" method="post">
+      <label for="title">Title:</label><br>
+      <input type="text" id="title" name="title" required><br>
+
+      <label for="content">Content:</label><br>
+      <textarea id="content" name="content" rows="10" required></textarea><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024 YourWiki. All rights reserved.</p>
+  </footer>
+</body>
+</html>

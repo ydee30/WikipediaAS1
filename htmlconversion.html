@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+        <style>
+            nav{
+    background-color: rgb(119, 84, 18);
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+    color: 
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color:#f2f2f2;
+  }
+
+  nav ul li a:hover {
+    color: gray;
+  }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+              <li><a href="entry.html">Entry</a></li>
+              <li><a href="new.html">New</a></li>
+              <li><a href="edit.html">Edit</a></li>
+              <li><a href="random.html">Random</a></li>
+              <li><a href="htmlconversion.html">ConvertToHTML</a></li>
+            </ul>
+          </nav>
+        <div style="text-align: center; margin: 20px;">
+            <h2>Markdown to HTML Converter</h2>
+            <textarea id="markdownInput" rows="10" cols="50" placeholder="Enter yout markdown here...">
+
+            </textarea>
+            <br>
+            <button onclick="convertMarkdown()">Convert</button>
+            <br>
+            <textarea id="htmlOutput" rows="10" cols="50" placeholder="Converted Markdown will appear here..." readonly>
+
+            </textarea>
+        </div>
+    </body>
+
+    <script>
+        function convertMarkdown(){
+            var converter = new showdown.Converter();
+            var text = document.getElementById('markdownInput').value;
+            var html = converter.makeHtml(text);
+
+            document.getElementById('htmlOutput').value = html;
+        }
+    </script>
+</html>
